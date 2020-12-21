@@ -26,17 +26,40 @@ getgif = async () => {
     let im23 = document.getElementById("im23")
     let im24 = document.getElementById("im24")
     let im25 = document.getElementById("im25")
+    let im26 = document.getElementById("im26")
+    let im27 = document.getElementById("im27")
+    let im28 = document.getElementById("im28")
+    let im29 = document.getElementById("im29")
+    let im30 = document.getElementById("im30")
+    let im31 = document.getElementById("im31")
+    let im32 = document.getElementById("im32")
+    let im33 = document.getElementById("im33")
+    let im34 = document.getElementById("im34")
+    let im35 = document.getElementById("im35")
+    let im36 = document.getElementById("im36")
+    let im37 = document.getElementById("im37")
+    let im38 = document.getElementById("im38")
+    let im39 = document.getElementById("im39")
+    let im40 = document.getElementById("im40")
+    let im41 = document.getElementById("im41")
+    let im42 = document.getElementById("im42")
+    let im43 = document.getElementById("im43")
+    let im44 = document.getElementById("im44")
+    let im45 = document.getElementById("im45")
+    let im46 = document.getElementById("im46")
+    let im47 = document.getElementById("im47")
+    let im48 = document.getElementById("im48")
+    let im49 = document.getElementById("im49")
+    let im50 = document.getElementById("im50")
     let image = document.getElementById("image")
     image.style.display = "flex"
     try {
         let input = document.getElementById("search")
         let search = input.value
-        let api = `https://api.giphy.com/v1/gifs/search?api_key=s17aYSAC0pi9w7Six7nutWVywoGTSt3c&q=${search}&limit=25&offset=0&rating=g&lang=en`
+        let api = `https://api.giphy.com/v1/gifs/search?api_key=s17aYSAC0pi9w7Six7nutWVywoGTSt3c&q=${search}&limit=50&offset=0&rating=g&lang=en`
         const response = await fetch(api)
-        // console.log(response)
         const jsondata = await response.json()
         const arrdata = [jsondata]
-        console.log(arrdata)
         img = arrdata[0].data[0].images.original.url
         img2 = arrdata[0].data[1].images.original.url
         img3 = arrdata[0].data[2].images.original.url
@@ -62,9 +85,32 @@ getgif = async () => {
         img23 = arrdata[0].data[22].images.original.url
         img24 = arrdata[0].data[23].images.original.url
         img25 = arrdata[0].data[24].images.original.url
+        img26 = arrdata[0].data[25].images.original.url
+        img27 = arrdata[0].data[26].images.original.url
+        img28 = arrdata[0].data[27].images.original.url
+        img29 = arrdata[0].data[28].images.original.url
+        img30 = arrdata[0].data[29].images.original.url
+        img31 = arrdata[0].data[30].images.original.url
+        img32 = arrdata[0].data[31].images.original.url
+        img33 = arrdata[0].data[32].images.original.url
+        img34 = arrdata[0].data[33].images.original.url
+        img35 = arrdata[0].data[34].images.original.url
+        img36 = arrdata[0].data[35].images.original.url
+        img37 = arrdata[0].data[36].images.original.url
+        img38 = arrdata[0].data[37].images.original.url
+        img39 = arrdata[0].data[38].images.original.url
+        img40 = arrdata[0].data[39].images.original.url
+        img41 = arrdata[0].data[40].images.original.url
+        img42 = arrdata[0].data[41].images.original.url
+        img43 = arrdata[0].data[42].images.original.url
+        img44 = arrdata[0].data[43].images.original.url
+        img45 = arrdata[0].data[44].images.original.url
+        img46 = arrdata[0].data[45].images.original.url
+        img47 = arrdata[0].data[46].images.original.url
+        img48 = arrdata[0].data[47].images.original.url
+        img49 = arrdata[0].data[48].images.original.url
+        img50 = arrdata[0].data[49].images.original.url
 
-        // let img = arrdata[0].images.original.url;
-        // console.log(src)
         console.log(img)
         im1.src = `${img}`
         im2.src = `${img2}`
@@ -92,13 +138,33 @@ getgif = async () => {
         im24.src = `${img24}`
         im25.src = `${img25}`
 
+        im26.src = `${img26}`
+        im27.src = `${img27}`
+        im28.src = `${img28}`
+        im29.src = `${img29}`
+        im30.src = `${img30}`
+        im31.src = `${img31}`
+        im32.src = `${img32}`
+        im33.src = `${img33}`
+        im34.src = `${img34}`
+        im35.src = `${img35}`
+        im36.src = `${img36}`
+        im37.src = `${img37}`
+        im38.src = `${img38}`
+        im39.src = `${img39}`
+        im40.src = `${img40}`
+        im41.src = `${img41}`
+        im42.src = `${img42}`
+        im43.src = `${img43}`
+        im44.src = `${img44}`
+        im45.src = `${img45}`
+        im46.src = `${img46}`
+        im47.src = `${img47}`
+        im48.src = `${img48}`
+        im49.src = `${img49}`
+        im50.src = `${img50}`
 
 
-        let share = document.getElementById("share")
-        share.addEventListener("click", () => {
-            window.open(`https://api.whatsapp.com/send?text=+encodeURIComponent(${img})`)
-
-        })
     } catch (error) {
 
     }
